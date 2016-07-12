@@ -5,6 +5,8 @@
  */
 package Codigo;
 
+import java.util.Random;
+
 /**
  *
  * @author Xavi
@@ -72,8 +74,10 @@ public class Laberinto {
     
     public static void main(String args[]){
         Laberinto laberinto = new Laberinto();
-        laberinto.laberinto[5][5] = 'S';
-        laberinto.resolver(3, 2);
+        Random inicio = new Random();
+        Random salida = new Random();
+        laberinto.laberinto[salida.nextInt(10)][salida.nextInt(10)] = 'S';
+        laberinto.resolver(inicio.nextInt(10),inicio.nextInt(10));
         System.out.println(laberinto.imprime());
     }
 }
